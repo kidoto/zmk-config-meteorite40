@@ -73,28 +73,6 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <25>;
         };
-
-        new_mouse_scroll: mouse_scroll {
-			compatible = "zmk,behavior-sensor-rotate-var";
-
-            /* sensor-bindings から引数を取らない */
-            #sensor-binding-cells = <0>;
-
-            /*
-             * bindings の順序がスクロール方向を決める
-             *  1つ目: センサー +方向
-             *  2つ目: センサー -方向
-             */
-
-            /* 通常スクロール（上 = UP / 下 = DOWN） */
-            // bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            /* 上下反転（macOS ナチュラルスクロール風） */
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            /* スクロールを刻む最小間隔（ms） */
-            tap-ms = <25>;
-        };
     };
 
     combos {
@@ -211,9 +189,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +,,,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>, // RE1: volume down/up
-                <&new_mouse_scroll>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
         };
 
         layer_4 {
