@@ -69,7 +69,7 @@
     behaviors {
         mouse_scroll: mouse_wheel {
             compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
+            #sensor-binding-cells = <0>;
             bindings = <&msc>, <&msc>;
             tap-ms = <25>;
         };
@@ -151,10 +151,10 @@
         layer_1 {
             display-name = "SYMBOLS";
             bindings = <
-                &kp ESCAPE  &kp LC(RIGHT)  &kp ENTER    &kp F5       &kp PLUS                       &kp JP_LPAREN       &kp JP_RPAREN  &kp JP_LBRACE     &kp JP_RBRACE  &kp MINUS
-                &kp LC(A)   &kp LC(S)      &kp PERCENT  &kp PERCENT  &kp JP_AMPERSAND               &winleft  &kp PG_DN      &kp PG_UP         &winright  &kp SEMICOLON
-                &kp LC(Z)   &kp LC(X)      &kp LC(C)    &kp LC(V)    &kp LC(LEFT)      &mkp MB4  &mkp MB5   &kp LS(NUMBER_7)    &kp QUESTION   &kp SLASH         &kp JP_YEN     &kp JP_ASTERISK
-                                     &trans     &trans    &trans    &trans    &trans     &trans    &kp DEL     &trans
+                &kp ESCAPE  &kp LC(RIGHT)  &kp ENTER    &kp F5       &kp PLUS                       &kp F2            &kp F10            &kp BACKSPACE   &kp DELETE       &kp JP_UNDERSCORE
+                &kp LC(A)   &kp LC(S)      &kp PERCENT  &kp PERCENT  &kp JP_AMPERSAND               &kp LEFT          &kp DOWN           &kp UP_ARROW    &kp RIGHT        &kp JP_COLON
+                &kp LC(Z)   &kp LC(X)      &kp LC(C)    &kp LC(V)    &kp LC(LEFT)      &mkp MB4  &mkp MB5   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
+                                     &trans     &trans    &trans    &trans    &kp LG(T)          &trans          &trans           &kp PIPE
             >;
 
             sensor-bindings =
@@ -167,10 +167,10 @@
         layer_2 {
             display-name = "NUM / ARROW";
             bindings = <
-                &kp JP_EQUAL   &kp JP_DQUOTE    &kp N7        &kp N8        &kp N9                        &kp LG(LS(S)) &kp LC(MINUS) &kp LC(EQUAL) &kp C_VOL_DN &kp C_VOL_UP
-                &kp JP_AT      &kp EXCLAMATION  &kp NUMBER_4  &kp N5        &kp NUMBER_6                       &none         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT
-                &kp JP_PLUS    &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &mkp MB4   &mkp MB5   &none         &kp LG(LEFT)  &kp LG(UP)    &kp LG(DOWN) &kp LG(RIGHT)
-                                        &kp BACKSLASH  &kp JP_CARET     &kp HASH      &kp SLASH     &trans        &trans  &trans    &trans
+                &kp JP_EQUAL   &kp JP_DQUOTE    &kp N7        &kp N8        &kp N9                        &kp JP_LPAREN       &kp JP_RPAREN  &kp JP_LBRACE     &kp JP_RBRACE  &kp MINUS
+                &kp JP_AT      &kp EXCLAMATION  &kp NUMBER_4  &kp N5        &kp NUMBER_6                       &winleft  &kp PG_DN      &kp PG_UP         &winright  &kp SEMICOLON
+                &kp JP_PLUS    &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &mkp MB4   &mkp MB5   &kp LS(NUMBER_7)    &kp QUESTION   &kp SLASH         &kp JP_YEN     &kp JP_ASTERISK
+                                        &kp BACKSLASH  &kp JP_CARET     &kp HASH      &kp LG(LS(RIGHT))   &kp COLON      &kp LG(UP_ARROW)  &kp BACKSLASH  &kp DOLLAR
             >;
 
             sensor-bindings =
