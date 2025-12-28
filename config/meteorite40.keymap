@@ -74,8 +74,8 @@
             tap-ms = <25>;
         };
 
-　　　　　　　　　　　　　　　　new_mouse_scroll: mouse_scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
+        new_mouse_scroll: mouse_scroll {
+			compatible = "zmk,behavior-sensor-rotate-var";
 
             /* sensor-bindings から引数を取らない */
             #sensor-binding-cells = <0>;
