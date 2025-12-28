@@ -73,6 +73,7 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <25>;
         };
+
 　　　　　　　　　　　　　　　　new_mouse_scroll: mouse_scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
 
